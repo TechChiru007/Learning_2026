@@ -1,0 +1,24 @@
+Day 1:- we are going to learn about cypress and its setup today
+
+Setup requirements and process
+
+1.NodeJs should be present in your system.
+   cmd :- npm -version
+2.Vs code IDE should be present .
+3.Create a folder 
+   mkdir folder name.
+4.Create/initisalize a jsonfile.
+   npm init -y
+5.Open created folder in vs code.
+6.Goto terminal install cypress
+   npm install cypress --save -dev
+7.Open cypress using 
+   npx cypress open 
+8. For reporting use mochaawesome dependency.
+   npm i --save-dev cypress-mochawesome-reporter
+   link :-https://www.npmjs.com/package/cypress-mochawesome-reporter
+9. run cypress
+   npx cypress run
+   npx cypress run --reporter mochawesome
+
+ 
