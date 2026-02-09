@@ -1,0 +1,29 @@
+Git Basic Commands
+
+1.Create a directory 
+  
+    mkdir foldername
+    cd foldername
+
+2.Git from start
+  
+ 1.git init (to initialize git in folder)
+ 2.git status
+ 3.git add .(for stagging)
+ 4.git reset (to reset or remove changes from stagging)
+ 5.git commit -m "any msg"
+ 6.git remote add origin gitrepopath
+ 7.git push origin main
+ 8.git pull
+ 9.git clone gitrepopath
+ 10.git stash 
+ 11.git stash list
+ 12.git stash pop
+ 13.git pull rebase
+ 14.git branch (search)
+ 15.git checkout -b newbranch(create new branch)
+ 16.git merge branch 
+ 17.git checkout branch (navigate to a branch)
+ 18.git revert #valeof commit
+    
+
