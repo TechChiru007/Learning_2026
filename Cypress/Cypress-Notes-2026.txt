@@ -21,4 +21,73 @@ Setup requirements and process
    npx cypress run
    npx cypress run --reporter mochawesome
 
+Basic Structure
+
+describe("Test Suite",()=>{
+
+ before("Test prerequists",()=>{
+
+ })
+ beforeEach("Test prerequists",()=>{
+
+ })
+ afterEach("Test prerequists",()=>{
+
+ })
+ after("Test prerequists",()=>{
+ 
+ })
+ it.skip("Testcase 1",()=>{
+
+ })
+ it.only("Testcase 2",()=>{
+
+ })
+ it("Testcase 3",()=>{
+
+ })
+})
+
+Ai answer
+
+
+describe('User Authentication Suite', () => {
+
+  // Runs once before any tests in this block
+  before(() => {
+    cy.log('Setting up global test data or seeding database');
+  });
+
+  // Runs before every single 'it' block
+  beforeEach(() => {
+    cy.visit('/login'); // Ensure we start at the login page every time
+  });
+
+  // Cleanup after every single 'it' block
+  afterEach(() => {
+    cy.log('Clearing local storage or cookies');
+    cy.clearLocalStorage();
+  });
+
+  // Runs once after all tests in this block are finished
+  after(() => {
+    cy.log('All tests finished. Tearing down environment.');
+  });
+
+  it('should successfully log in with valid credentials', () => {
+    cy.get('#username').type('standard_user');
+    cy.get('#password').type('secret_password');
+    cy.get('#login-button').click();
+    cy.url().should('include', '/dashboard');
+  });
+
+  it('should display an error for invalid credentials', () => {
+    cy.get('#username').type('wrong_user');
+    cy.get('#password').type('wrong_password');
+    cy.get('#login-button').click();
+    cy.get('.error-message').should('be.visible');
+  });
+
+});
+
  
